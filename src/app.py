@@ -6,7 +6,7 @@ for extracurricular activities at Mergington High School.
 """
 
 from fastapi import FastAPI, HTTPException
-from fastapi.staticfiles import StaticFiles
+git revert HEAD
 from fastapi.responses import RedirectResponse
 import os
 from pathlib import Path
@@ -20,7 +20,48 @@ app.mount("/static", StaticFiles(directory=os.path.join(Path(__file__).parent,
           "static")), name="static")
 
 # In-memory activity database
- 
+activities = {
+    "Drama Club": {
+        "description": "Perform in school plays and musicals",
+        "participants": []
+    },
+    "Debate Team": {
+        "description": "Compete in debate competitions",
+        "participants": []
+    },
+    "Science Club": {
+        "description": "Explore scientific experiments and projects",
+        "participants": []
+    },
+    "Chess Club": {
+        "description": "Play and learn chess strategy",
+        "participants": []
+    },
+    "Basketball Team": {
+        "description": "Join the school basketball team and compete",
+        "participants": []
+    },
+    "Soccer Team": {
+        "description": "Play competitive soccer matches",
+        "participants": []
+    },
+    "Art Studio": {
+        "description": "Create paintings, sculptures, and digital art",
+        "participants": []
+    },
+    "Music Band": {
+        "description": "Practice and perform in the school band",
+        "participants": []
+    },
+    "Robotics Club": {
+        "description": "Build and program robots for competitions",
+        "participants": []
+    },
+    "Math Olympiad": {
+        "description": "Solve challenging math problems and compete",
+        "participants": []
+    }
+}
 
 @app.get("/")
 def root():
